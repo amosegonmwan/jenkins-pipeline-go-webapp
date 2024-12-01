@@ -57,7 +57,7 @@ The pipeline clones the Go application source code from the following Git reposi
 * **Builds the Docker Image:** A Docker image is built with the tag `adminturneddevops/go-webapp-sample`.
 * **Runs the Container:** The application is run in a Docker container on port `8090`, mapping to the internal port `8000`.
   
-Prerequisites
+### Prerequisites
 * **Jenkins:** Ensure Jenkins is installed and configured.
 * **Docker:** Docker must be installed on the Jenkins agent.
 * **Git:** Git must be installed on the Jenkins agent.
