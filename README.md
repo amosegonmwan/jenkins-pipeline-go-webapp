@@ -45,23 +45,25 @@ pipeline {
 
 ## How It Works
 ### 1. Agent Configuration
-The pipeline runs on a Jenkins agent labeled master and uses a custom workspace determined by the Jenkins home directory and build number.
+The pipeline runs on a Jenkins agent labeled `master` and uses a custom workspace determined by the Jenkins home directory and build number.
 
 ### 2. Environment Variables
-`Go111MODULE` is set to on to enable Go modules.
+* `Go111MODULE` is set to on to enable Go modules.
 
 ### 3. Git-Clone Stage
-The pipeline clones the Go application source code from the following Git repository: https://github.com/kodekloudhub/go-webapp-sample
+The pipeline clones the Go application source code from the following Git repository: `https://github.com/kodekloudhub/go-webapp-sample`
 
 ### 4. Docker-Build Stage
-Builds the Docker Image: A Docker image is built with the tag adminturneddevops/go-webapp-sample.
-Runs the Container: The application is run in a Docker container on port 8090, mapping to the internal port 8000.
+* **Builds the Docker Image:** A Docker image is built with the tag `adminturneddevops/go-webapp-sample`.
+* **Runs the Container:** The application is run in a Docker container on port `8090`, mapping to the internal port `8000`.
+  
 Prerequisites
-Jenkins: Ensure Jenkins is installed and configured.
-Docker: Docker must be installed on the Jenkins agent.
-Git: Git must be installed on the Jenkins agent.
-Go: Go programming language installed if modifications to the application are required.
-Accessing the Application
-Once the pipeline is executed successfully:
+* **Jenkins:** Ensure Jenkins is installed and configured.
+* **Docker:** Docker must be installed on the Jenkins agent.
+* **Git:** Git must be installed on the Jenkins agent.
+* **Go:** Go programming language installed if modifications to the application are required.
 
-The application will be accessible at http://<JENKINS_AGENT_IP>:8090.
+### Accessing the Application
+* Once the pipeline is executed successfully:
+
+* The application will be accessible at http://<JENKINS_AGENT_IP>:8090.
